@@ -1,3 +1,4 @@
 class Sighting < ApplicationRecord
     belongs_to :animal
-end
+    validates :latitude, :longitude, :date, presence: true
+  end
