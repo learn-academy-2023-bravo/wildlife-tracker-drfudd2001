@@ -21,4 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_20_230727) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sightings", id: false, force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.date "date"
+    t.integer "animal_id"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+  end
+
 end
